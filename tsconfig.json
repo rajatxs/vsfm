@@ -1,0 +1,15 @@
+{
+   "$schema": "https://json.schemastore.org/tsconfig",
+   "compilerOptions": {
+      "allowJs": false,
+      "checkJs": false,
+      "alwaysStrict": false,
+      "target": "ES2015",
+      "strict": false,
+      "removeComments": true,
+      "declaration": true,
+      "moduleResolution": "Node",
+      "module": "CommonJS",
+      "outDir": "./dist"
+   }
+}
