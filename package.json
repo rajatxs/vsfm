@@ -1,7 +1,7 @@
 {
   "name": "@rxpm/vsfm",
   "description": "Middleware composition utility for Vercel Serverless Function",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/main.js",
   "author": "Rajat Sharma <rxx175@gmail.com> (https://github.com/rajatxs)",
   "scripts": {
