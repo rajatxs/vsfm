@@ -5,5 +5,10 @@ export type AppNextFunction = () => void
 export type AppMiddleware = (
    req: VercelRequest, 
    res: VercelResponse, 
-   next?: AppNextFunction
+   next: AppNextFunction
+) => any
+
+export type AppHandler = (
+   req: VercelRequest,
+   res: VercelResponse,
 ) => any
