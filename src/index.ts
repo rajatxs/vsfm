@@ -1,9 +1,12 @@
-import { VercelRequest, VercelResponse } from '@vercel/node'
-import { AppMiddleware, AppNextFunction } from './interfaces/app'
+import type { VercelRequest, VercelResponse } from '@vercel/node'
+import type { AppMiddleware, AppHandler, AppNextFunction } from './types'
 
-/** Middleware composition */
-export function compose(...middlewares: AppMiddleware[]): AppMiddleware {
-   if (!middlewares.every(fun => typeof fun === 'function')) {
+/**
+ * Middleware composition 
+ * @param cbs - List of middlewares and handler
+ */
+export function compose(...cbs: AppMiddleware[] | AppHandler[]): AppMiddleware {
+   if (!cbs.every(fun => typeof fun === 'function')) {
       throw new TypeError("Middleware must be composed of functions!")
    }
 
@@ -19,8 +22,8 @@ export function compose(...middlewares: AppMiddleware[]): AppMiddleware {
          }
 
          index = i
-         let fn = middlewares[i]
-         if (i === middlewares.length) {
+         let fn = cbs[i]
+         if (i === cbs.length) {
             fn = next
          }
 
@@ -39,5 +42,6 @@ export function compose(...middlewares: AppMiddleware[]): AppMiddleware {
 
 export {
    AppMiddleware,
+   AppHandler,
    AppNextFunction
 }
