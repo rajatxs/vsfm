@@ -1,25 +1,28 @@
 {
-  "name": "@rxpm/vsfm",
-  "description": "Middleware composition utility for Vercel Serverless Function",
-  "version": "1.1.0",
-  "main": "dist/index.js",
-  "author": "Rajat Sharma <rxx175@gmail.com> (https://github.com/rajatxs)",
-  "scripts": {
-    "build": "tsc"
-  },
-  "keywords": [
-    "middleware",
-    "vercel",
-    "rxpm",
-    "vsfm"
-  ],
-  "repository": "https://github.com/rajatxs/vsfm.git",
-  "readme": "https://github.com/rajatxs/vsfm#readme",
-  "markdown": "github",
-  "preferGlobal": false,
-  "license": "MIT",
-  "devDependencies": {
-    "@vercel/node": "^2.15.8",
-    "typescript": "^5.1.6"
-  }
+    "name": "@rxpm/vsfm",
+    "description": "Middleware composition utility for Vercel Serverless Function",
+    "version": "1.2.0",
+    "main": "dist/index.js",
+    "markdown": "standard",
+    "preferGlobal": false,
+    "license": "ISC",
+    "scripts": {
+        "build": "tsc"
+    },
+    "keywords": [
+        "middleware",
+        "vercel",
+        "rxpm",
+        "vsfm"
+    ],
+    "author": {
+        "name": "Rajat Sharma",
+        "email": "rajatxt@proton.me",
+        "url": "https://gitlab.com/rajatxs"
+    },
+    "repository": "https://gitlab.com/rajatxs/vsfm.git",
+    "devDependencies": {
+        "@vercel/node": "^5.3.13",
+        "typescript": "^5.1.6"
+    }
 }
